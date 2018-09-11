@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: #d3ccd0;
+    font-family: 'Noto Serif JP', sans-serif;
+    color: white;
+}
+.containter{
+    margin: 40px auto;
+    width: 100%;
+    height: 500px;
+    //border:1px solid hotpink;
+    position: relative;
+}
+
+.dog-frame{ //frame for dog and his stuff
+    width: 100%;
+    height: 100%;
+    //border:1px solid #0b2229;
+}
+.dog-menu{
+    height: 100%;
+    //border:1px solid #6886ff;
+    position: absolute;
+    top:0;
+    right: 0;
+    text-align: right;
+}
