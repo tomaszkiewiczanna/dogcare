@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body {
-    background: #d3ccd0;
+    background: $background;
     font-family: 'Noto Serif JP', sans-serif;
     color: white;
 }
@@ -28,4 +28,5 @@ body {
     top:0;
     right: 0;
     text-align: right;
+    padding: 20px 60px 0px 0;
 }

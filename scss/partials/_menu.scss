@@ -1,0 +1,40 @@
+.dog-menu-head{
+    font-size: 34px;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+}
+.dog-menu-list{
+    padding-right: 15px;
+}
+.dog-menu-list-ul{
+    list-style: none;
+
+}
+.dog-menu-list-li{
+    display: block;
+    padding: 7px;
+
+}
+.dog-menu-list-li button{
+    width: 120px;
+    height: 40px;
+    background: none;
+    border: 2px solid white;
+    border-radius: 50px;
+    color: white;
+    font-family: 'Noto Serif JP', sans-serif;
+    letter-spacing: 1.2px;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
+.dog-menu-list-li button:hover {
+    background: darken($background, 7%);
+    transform: scale(1.05);
+    border: 2px solid #f8f8f8;
+}
+.dog-menu-list-li button:focus{
+    outline: 0;
+}
+
