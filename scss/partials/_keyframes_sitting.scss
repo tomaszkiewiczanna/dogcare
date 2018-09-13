@@ -1,4 +1,5 @@
-.sits .dog-ear-1 {
+.sits .dog-ear-1,
+.info-frame .dog-ear-1{
     animation: sitsEar 0.8s 0s infinite alternate ease-in-out;
     transform-origin: top center;
 }
@@ -53,8 +54,8 @@
         transform: translate(05%, 0%);
     }
 }
-.sits .dog-leg-fl:after,
-.sits .dog-leg-fr:after {
+.sits .dog-leg-fl-paw,
+.sits .dog-leg-fr-paw {
     animation: sitsPaw 1s 0s infinite alternate linear;
     transform-origin: center;
 }

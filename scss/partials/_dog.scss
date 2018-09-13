@@ -112,7 +112,6 @@
 }
 .dog-torse{
     @include baseTopRight(-2px,3px,75px,60px);
-    border: 1px solid $dog-grey;
     background: $dog-grey;
     border-radius: 200% 10% 150% 70%;
     transform: rotate(10deg);
@@ -120,7 +119,6 @@
 }
 .dog-belly{
     @include baseTopRight(22px,16px,95px,70px);
-    border: 1px solid $dog-grey;
     background: $dog-grey;
     border-radius: 200% 10% 150% 70%;
     transform: rotate(140deg);
@@ -135,7 +133,6 @@
 }
 .dog-ass{
     @include baseBottomLeft(1px,0,80px,80px);
-    border: 1px solid $dog-grey;
     background: $dog-grey;
     border-radius: 130% 80% 100% 50%;
     transform: rotate(0deg);
@@ -159,9 +156,8 @@
     transform: rotate(0deg);
     z-index: 2;
 }
-.dog-leg-fl::after{
-    content: '';
-    @include baseBottomLeft(-3px,3px,25px,17px);
+.dog-leg-fl-paw{
+    @include baseBottomLeft(-3px,5px,25px,17px);
     background: $dog-superlight;
     border-radius: 40% 240% 60% 150%;
     transform: rotate(0deg);
@@ -171,15 +167,13 @@
     @include baseTopRight(-14px,2px,15px,110px);
     background: linear-gradient(0deg, $dog-superlight 20%, $dog-grey 30%);
     border-radius: 10% 200% 70% 150%;
-    transform: rotate(0deg);
+
     z-index: 2;
 }
-.dog-leg-fr::after{
-    content: '';
-    @include baseBottomLeft(-3px,3px,25px,17px);
+.dog-leg-fr-paw{
+    @include baseBottomRight(10px,-13px,25px,17px);
     background: $dog-superlight;
     border-radius: 40% 240% 60% 150%;
-    transform: rotate(0deg);
     z-index: 2;
 }
 .dog-back-legs{
@@ -190,17 +184,14 @@
 }
 .dog-leg-bl{
     @include baseTopLeft(0,0,18px,110px);
-    border: 1px solid $dog-grey;
     background: $dog-grey;
     border-radius: 10% 200% 70% 150%;
-    transform: rotate(0deg);
     z-index: 2;
 }
 .dog-leg-br{
     @include baseTopRight(-14px,0,15px,110px);
     background: $dog-grey;
     border-radius: 10% 200% 70% 150%;
-    transform: rotate(0deg);
     z-index: 2;
 }
 .dog-cloud{
