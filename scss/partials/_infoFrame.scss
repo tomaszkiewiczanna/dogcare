@@ -1,0 +1,106 @@
+.startBox{ //container
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.info-frame{
+    width: 700px;
+    height: 500px;
+    background: darken($background, 10);
+    border-radius: 30px;
+    box-shadow: -2px 14px 68px -20px rgba(0,0,0,0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.info-frame input:focus,
+.info-frame button:focus{
+    outline: none;
+}
+.info-frame-circle{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    background: #eaecee;
+    box-shadow: -2px 14px 68px -15px rgba(0,0,0,0.7);
+    border-radius: 50%;
+    margin-bottom: 20px;
+    animation: infoFrameAnim 2s 0s alternate infinite linear;
+}
+@keyframes infoFrameAnim {
+    100% {
+        transform: scale(1.02);
+    }
+}
+.info-frame-dog-face{
+    position: absolute;
+    left: -47%;
+    top: 40px;
+    transform: scale(1.4) rotate(-9deg);
+}
+.dog-collar{
+    @include baseTopLeft(81px,64px,44px,10px);
+    transform: rotate(15deg);
+    background: #bdab68;
+    border-radius: 30%;
+    z-index: 2;
+}
+.colorsChoice{
+    width: 45px;
+    height: 45px;
+    padding: 15px;
+    border-radius: 10%;
+    border: 1.5px solid darken($background, 12);
+    box-shadow: -2px 14px 68px -17px rgba(0,0,0,0.9);
+    margin-bottom: 10px;
+    transition: 0.2s linear;
+}
+.choice-grey{
+    background: $dog-grey;
+}
+.choice-bw{
+    background: white;
+}
+.choice-golden{
+    background: #bfad8e;
+}
+.choice-brown{
+    background: #91735c;
+}
+
+#name-input{
+    width: 200px;
+    height: 35px;
+    border-radius: 10px;
+    background: white;
+    border: 2px solid #d4d4d4;
+    color: #444;
+    font-size: 16px;
+    letter-spacing: 1.3px;
+    text-align: center;
+    font-family: 'Noto Serif JP', sans-serif;
+}
+#info-frame-go{
+    position: absolute;
+    bottom: 119px;
+    left: 784px;
+    width: 45px;
+    height: 36px;
+    border-radius: 10px;
+    background: #bdab68;
+    border: 1px solid darken(#bdab68,1.8);
+    color: #e6e6e6;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 1.3px;
+    text-align: center;
+    font-family: 'Noto Serif JP', sans-serif;
+    transition: 0.3s ease-out;
+}
+.info-frame button:hover {
+    cursor: pointer;
+    transform: scale(1.06);
+}

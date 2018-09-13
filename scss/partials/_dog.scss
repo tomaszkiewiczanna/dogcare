@@ -10,7 +10,7 @@
     border-radius: 90%;
     z-index: -1;
 }
-.dog-head{
+.dog .dog-head{
     @include baseTopLeft(0,150px,130px,100px);
     position: absolute;
     //border: 1px solid brown;
