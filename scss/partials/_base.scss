@@ -7,13 +7,14 @@ body {
     background: $background;
     font-family: 'Noto Serif JP', sans-serif;
     color: white;
+    position: relative;
 }
 .containter{
     margin: 40px auto;
     width: 100%;
     height: 500px;
     //border:1px solid hotpink;
-    position: relative;
+    position: absolute;
 }
 
 .dog-frame{ //frame for dog and his stuff
@@ -29,4 +30,12 @@ body {
     right: 0;
     text-align: right;
     padding: 20px 60px 0px 0;
+}
+.startBox{
+     left: 0;
+     top: 0;
+ }
+
+.startDog {
+    opacity: 0;
 }

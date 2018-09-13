@@ -40,4 +40,32 @@
 .dog-menu-list-li button:focus{
     outline: 0;
 }
+.dog-menu-back{
+    position: absolute;
+    top: -45px;
+    left: 0;
+    padding: 20px;
+}
+.button-back{
+    width: 40px;
+    height: 40px;
+    border: 2px solid darken($background, 3);
+    border-radius: 10px;
+    background: $background;
+    box-shadow: -2px 14px 68px -15px rgba(0,0,0,0.30);
+    color: darken($background, 3);
+    font-family: 'Noto Serif JP', sans-serif;
+    letter-spacing: 1.2px;
+    text-decoration: none;
+    font-size: 25px;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
+.button-back:hover {
+    background: darken($background, 7%);
+    transform: scale(1.05);
+}
+.button-back:focus{
+    outline: 0;
+}
 
