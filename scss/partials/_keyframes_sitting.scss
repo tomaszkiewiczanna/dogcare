@@ -1,0 +1,92 @@
+.sits .dog-ear-1 {
+    animation: sitsEar 0.8s 0s infinite alternate ease-in-out;
+    transform-origin: top center;
+}
+@keyframes sitsEar {
+    100% {
+        transform: rotate(3deg);
+    }
+}
+.sits .dog-tail {
+    animation: sitsTail 0.3s 0s infinite alternate ease-in-out;
+    transform-origin: bottom right;
+}
+@keyframes sitsTail {
+    100% {
+        transform: rotate(12deg);
+    }
+}
+.sits .dog-body,
+.sits.dog::after{
+    animation: sitsBody 2s 0s infinite alternate linear;
+    transform-origin: center;
+}
+@keyframes sitsBody {
+    100% {
+        transform: scale(1.02) translate(1%, 1%);
+    }
+}
+.sits .dog-nose:after,
+.sits .dog-eye-1,
+.sits .dog-eye-2{
+    animation: sitsNose 1s 0s infinite alternate linear;
+    transform-origin: center;
+}
+@keyframes sitsNose {
+    100% {
+        transform: rotate(2deg) scale(1.06);
+    }
+}
+.sits .dog-eye-1:after,
+.sits .dog-eye-2:after{
+    animation: sitsEyes 6s 0s infinite ease-in-out;
+    transform-origin: center;
+}
+@keyframes sitsEyes {
+    40% {
+        transform: translate(20%, 10%);
+    }
+    80% {
+        transform: translate(25%, 0%);
+    }
+    100%{
+        transform: translate(05%, 0%);
+    }
+}
+.sits .dog-leg-fl:after,
+.sits .dog-leg-fr:after {
+    animation: sitsPaw 1s 0s infinite alternate linear;
+    transform-origin: center;
+}
+@keyframes sitsPaw {
+    100% {
+        transform: rotate(2deg) scale(1.08);
+    }
+}
+.sits .dog-tongue {
+    animation: sitsTongue 1.5s 0s infinite alternate linear;
+    transform-origin: center;
+}
+@keyframes sitsTongue {
+    100% {
+        transform: translate(-50%, 0%);
+    }
+}
+.dog-cloud{
+    animation: sitsCloudStart 2.5s 0s ease-out,
+                sitsCloudConst 2.5s 3s linear infinite alternate;
+    transform-origin: bottom right;
+}
+@keyframes sitsCloudStart {
+    0% {
+        transform: scale(0.01);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+@keyframes sitsCloudConst {
+    100% {
+        transform: translate(-2%, -1%);
+    }
+}

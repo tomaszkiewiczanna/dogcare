@@ -2,12 +2,14 @@
     font-size: 34px;
     letter-spacing: 1.5px;
     margin-bottom: 10px;
+    text-shadow: 0 0 4px #a2a2a2;
 }
 .dog-menu-list{
     padding-right: 15px;
 }
 .dog-menu-list-ul{
     list-style: none;
+
 
 }
 .dog-menu-list-li{
@@ -20,6 +22,7 @@
     height: 40px;
     background: none;
     border: 2px solid white;
+    box-shadow: -2px 14px 68px -15px rgba(0,0,0,0.33);
     border-radius: 50px;
     color: white;
     font-family: 'Noto Serif JP', sans-serif;

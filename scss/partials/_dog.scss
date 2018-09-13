@@ -1,60 +1,35 @@
 .dog{ //dog body container
-    position: absolute;
-    bottom: -7%;
-    left: 38%;
-    width: 400px;
-    height: 300px;
+    @include baseBottomLeft(-7%,38%,400px,300px);
     transform: translate(-50%,0) scale(1.25);
     //border: 1px solid #ff572d;
 }
 .dog::after{
-    position: absolute;
-    bottom: 67px;
-    left: 113px;
     content: '';
-    width: 210px;
-    height: 57px;
+    @include baseBottomLeft(67px,113px,210px,57px);
     background: rgba($dog-darker,0.1);
     border-radius: 90%;
     z-index: -1;
 }
 .dog-head{
+    @include baseTopLeft(0,150px,130px,100px);
     position: absolute;
-    top: 0;
-    left: 150px;
-    width: 130px;
-    height: 100px;
     //border: 1px solid brown;
 }
 .dog-head-form{
-    position: absolute;
-    top: 20px;
-    left: 60px;
-    width: 80px;
-    height: 66px;
+    @include baseTopLeft(20px,60px,80px,66px);
     background: $dog-grey;
     border-radius: 60% 90% 70% 40%;
     transform: rotate(16deg);
     z-index: 2;
 }
 .dog-ear-1{
-    position: absolute;
-    top: 39px;
-    left: 28px;
-    width: 58px;
-    height: 26px;
+    @include baseTopLeft(24px,56px,28px,60px);
     background: $dog-darker;
-    border-radius: 40% 20% 90% 60%;
-    -webkit-transform: rotate(31deg);
-    transform: rotate(109deg);
+    border-radius: 100% 80% 160% 60%;
     z-index: 4;
 }
 .dog-ear-2{
-    position: absolute;
-    top: 26px;
-    left: 98px;
-    width: 39px;
-    height: 26px;
+    @include baseTopLeft(26px,98px,39px,26px);
     background: #888783;
     border-radius: 40% 10% 90% 40%;
     -webkit-transform: rotate(31deg);
@@ -62,77 +37,48 @@
     z-index: 0;
 }
 .dog-eye-1{
-    position: absolute;
-    top: 38px;
-    left: 90px;
-    height: 13px;
-    width: 10px;
+    @include baseTopLeft(38px,94px,10px,13px);
     background: white;
     border-radius: 50%;
     z-index: 2;
 }
 .dog-eye-1::after{
     content: '';
-    position: absolute;
-    bottom: 1px;
-    right: 0;
-    height: 9px;
-    width: 7px;
+    @include baseBottomRight(1px,0,7px,9px);
     background: #222222;
     border-radius: 50%;
     z-index: 2;
 }
 .dog-eye-2{
-    position: absolute;
-    top: 34px;
-    left: 110px;
-    width: 10px;
-    height: 13px;
+    @include baseTopLeft(34px,112px,10px,13px);
     background: white;
     border-radius: 50%;
     z-index: 2;
 }
 .dog-eye-2::after{
     content: '';
-    position: absolute;
-    bottom: 1px;
-    right: 0px;
-    height: 9px;
-    width: 7px;
+    @include baseBottomRight(1px,0,7px,9px);
     background: #222222;
     border-radius: 50%;
     z-index: 2;
 }
 .dog-nose{
-    position: absolute;
-    top: 52px;
-    left: 111px;
-    width: 44px;
-    height: 30px;
+    @include baseTopLeft(52px,111px,44px,30px);
     background: $dog-darker;
     border-radius: 40% 40% 90% 40%;
-    -webkit-transform: rotate(31deg);
     transform: rotate(2deg);
     z-index: 2;
 }
 .dog-nose::after{
     content: '';
-    position: absolute;
-    top: 1px;
-    right: 1px;
-    width: 17px;
-    height: 11px;
+    @include baseTopRight(1px,1px,17px,11px);
     background: #323232;
     border-radius: 60% 50%;
     transform: rotate(2deg);
     z-index: 2;
 }
 .dog-mouth{
-    position: absolute;
-    top: 60px;
-    left: 135px;
-    width: 14px;
-    height: 16px;
+    @include baseTopLeft(60px,135px,14px,16px);
     border-left: 1px solid #404040;
     border-bottom: 1px solid #404040;
     border-radius: 50% 120%;
@@ -140,11 +86,7 @@
     z-index: 2;
 }
 .dog-tongue{
-    position: absolute;
-    bottom: 20px;
-    left: 131px;
-    height: 12px;
-    width: 30px;
+    @include baseBottomLeft(17px,122px,30px,12px);
     background: #f7b4cb;
     border-radius: 30% 200% 80% 20%;
     transform: rotate(45deg);
@@ -152,40 +94,24 @@
 }
 .dog-tongue::after{
     content: '';
-    position: absolute;
-    bottom: 3px;
-    left: -7px;
-    height: 10px;
-    width: 30px;
+    @include baseBottomLeft(3px,-7px,30px,10px);
     background: #e5a7bc;
     border-radius: 30% 200% 80% 20%;
     transform: rotate(0deg);
 }
 .dog-body{
-    position: absolute;
-    top: 80px;
-    left: 120px;
-    height: 137px;
-    width: 130px;
+    @include baseTopLeft(80px,120px,130px,137px);
     //border: 1px solid darkslategrey;
 }
 .dog-neck{
-    position: absolute;
-    top: -10px;
-    right: 0;
-    width: 60px;
-    height: 40px;
+    @include baseTopRight(-10px,0,60px,40px);
     background: $dog-grey;
     border-radius: 160% 40% 70% 50%;
     transform: rotate(12deg);
     z-index: 2;
 }
 .dog-torse{
-    position: absolute;
-    top: -2px;
-    right: 3px;
-    height: 60px;
-    width: 75px;
+    @include baseTopRight(-2px,3px,75px,60px);
     border: 1px solid $dog-grey;
     background: $dog-grey;
     border-radius: 200% 10% 150% 70%;
@@ -193,11 +119,7 @@
     z-index: 2;
 }
 .dog-belly{
-    position: absolute;
-    top: 22px;
-    right: 16px;
-    height: 70px;
-    width: 95px;
+    @include baseTopRight(22px,16px,95px,70px);
     border: 1px solid $dog-grey;
     background: $dog-grey;
     border-radius: 200% 10% 150% 70%;
@@ -205,22 +127,14 @@
     z-index: 2;
 }
 .dog-spot{
-    position: absolute;
-    top: 24px;
-    left: 23px;
-    height: 63px;
-    width: 20px;
+    @include baseTopLeft(24px,23px,20px,63px);
     background: $dog-darker;
     border-radius: 80% 30% 90% 80%;
     transform: rotate(40deg);
     z-index: 2;
 }
 .dog-ass{
-    position: absolute;
-    bottom: 1px;
-    left: 0;
-    height: 80px;
-    width: 80px;
+    @include baseBottomLeft(1px,0,80px,80px);
     border: 1px solid $dog-grey;
     background: $dog-grey;
     border-radius: 130% 80% 100% 50%;
@@ -228,31 +142,18 @@
     z-index: 2;
 }
 .dog-tail{
-    position: absolute;
-    top: 55px;
-    left: -45px;
-    width: 40px;
-    height: 75px;
+    @include baseTopLeft(55px,-45px,80px,60px);
     border-left: 5px solid $dog-darker;
     border-bottom: 5px solid $dog-darker;
-    border-radius: 50% 120%;
-    transform: rotate(-40deg);
+    border-radius: 80% 200%;
     z-index: 0;
 }
 .dog-front-legs{
-    position: absolute;
-    top: 10px;
-    left: 90px;
-    height: 115px;
-    width: 40px;
+    @include baseTopLeft(10px,90px,40px,115px);
     //border: 1px solid darkslategrey;
 }
 .dog-leg-fl{
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    height: 110px;
-    width: 18px;
+    @include baseTopLeft(0,0,18px,110px);
     background: linear-gradient(0deg, $dog-superlight 15%, $dog-grey 30%);
     border-radius: 10% 200% 70% 150%;
     transform: rotate(0deg);
@@ -260,22 +161,14 @@
 }
 .dog-leg-fl::after{
     content: '';
-    position: absolute;
-    bottom: -3px;
-    left: 3px;
-    height: 17px;
-    width: 25px;
+    @include baseBottomLeft(-3px,3px,25px,17px);
     background: $dog-superlight;
     border-radius: 40% 240% 60% 150%;
     transform: rotate(0deg);
     z-index: 2;
 }
 .dog-leg-fr{
-    position: absolute;
-    top: -14px;
-    right: 2px;
-    height: 110px;
-    width: 15px;
+    @include baseTopRight(-14px,2px,15px,110px);
     background: linear-gradient(0deg, $dog-superlight 20%, $dog-grey 30%);
     border-radius: 10% 200% 70% 150%;
     transform: rotate(0deg);
@@ -283,32 +176,20 @@
 }
 .dog-leg-fr::after{
     content: '';
-    position: absolute;
-    bottom: -3px;
-    left: 3px;
-    height: 17px;
-    width: 25px;
+    @include baseBottomLeft(-3px,3px,25px,17px);
     background: $dog-superlight;
     border-radius: 40% 240% 60% 150%;
     transform: rotate(0deg);
     z-index: 2;
 }
 .dog-back-legs{
-    position: absolute;
-    top: 112px;
-    left: 10px;
-    height: 115px;
-    width: 40px;
-    //border: 1px solid darkslategrey;
+    @include baseTopLeft(112px,10px,40px,115px);
     transform: rotate(-90deg) translate(-11%, -13%) scaleY(0.8);
     transform-origin: top center;
+    //border: 1px solid darkslategrey;
 }
 .dog-leg-bl{
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 110px;
-    width: 18px;
+    @include baseTopLeft(0,0,18px,110px);
     border: 1px solid $dog-grey;
     background: $dog-grey;
     border-radius: 10% 200% 70% 150%;
@@ -316,13 +197,34 @@
     z-index: 2;
 }
 .dog-leg-br{
-    position: absolute;
-    top: -14px;
-    right: 0;
-    height: 110px;
-    width: 15px;
+    @include baseTopRight(-14px,0,15px,110px);
     background: $dog-grey;
     border-radius: 10% 200% 70% 150%;
     transform: rotate(0deg);
     z-index: 2;
+}
+.dog-cloud{
+    @include baseTopLeft(-43px,-15px,165px,70px);
+    padding: 5px 10px 10px 10px;
+    border: 2px solid #eee;
+    border-radius: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: -2px 14px 68px -27px rgba(0,0,0,0.3);
+}
+.dog-cloud:after{
+    content: '';
+    @include baseBottomRight(4px,4px,13px,13px);
+    display: block;
+    background: $background;
+    border-right: 2px solid #eee;
+    border-bottom: 2px solid #eee;
+    transform: translate(50%, 50%) skew(20deg) rotate(10deg);
+}
+.dog-cloud-txt{
+    font-weight: 300;
+    font-size: 12px;
+    color: #f9f9f9;
 }
