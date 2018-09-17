@@ -4,6 +4,7 @@ $(() => {
     const $lightElems = $('.colorLight');
     const $gradElems = $('.colorGrad');
     const $tailElem = $('.dog-tail');
+    const $dog= $('.dog-frame');
 
     const $brickGrey = $('.choice-grey');
     const $brickBW = $('.choice-bw');
@@ -16,6 +17,11 @@ $(() => {
     const $startBox= $('.startBox');
     const $startDog= $('.startDog');
     const $backBtn=$('.button-back');
+
+    const $btnFood =$('.button-food');
+    const $btnSleep =$('.button-sleep');
+    const $btnBall =$('.button-ball');
+    const $btnWalk =$('.button-walk');
 
     //color change
     $brickGrey.on('click', () => {
@@ -60,5 +66,17 @@ $(() => {
     $backBtn.on('click', function () {
         $startBox.css('top', '0');
         $startDog.css('opacity', '0');
+    })
+    //action buttons
+    $btnSleep.on('click', function () {
+        if (!$dog.hasClass('sleeps')){
+            $dog.removeClass('sits');
+            $dog.addClass('sleeps');
+            $btnSleep.text('Back');
+        } else {
+            $dog.removeClass('sleeps');
+            $dog.addClass('sits');
+            $btnSleep.text('Naps');
+        }
     })
 });

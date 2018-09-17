@@ -15,6 +15,7 @@ body {
     height: 500px;
     //border:1px solid hotpink;
     position: absolute;
+    overflow: hidden;
 }
 
 .dog-frame{ //frame for dog and his stuff
@@ -29,7 +30,7 @@ body {
     top:0;
     right: 0;
     text-align: right;
-    padding: 20px 60px 0px 0;
+    padding: 20px 60px 0 0;
 }
 .startBox{
      left: 0;

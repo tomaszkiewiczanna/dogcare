@@ -1,0 +1,150 @@
+//elements
+.sleeps .dog-bed{
+    opacity: 1;
+}
+.sleeps .dog-nose{
+    z-index: 10;
+}
+//animations
+.sleeps .dog-bed-1,
+.sleeps .dog-bed-2{
+    animation: sleepsBedStart 3s 0s ease-out;
+    transform-origin: center;
+}
+@keyframes sleepsBedStart {
+    0% {
+        transform: scale(0.01);
+        z-index: 2;
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+.sleeps .dog-bed-3{
+    animation: sleepsBedStart 3s 0s ease-out;
+    transform-origin: center;
+}
+@keyframes sleepsBedStart {
+    0% {
+        transform: scale(0.01);
+        z-index: 0;
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+.sleeps .dog-floor{
+    animation: sleepsFloorStart 1s 3s forwards ease-out;
+    transform-origin: center;
+}
+@keyframes sleepsFloorStart {
+    0% {
+        transform: scale(0.01);
+        opacity: 1;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+.sleeps .dog-eye-1:after,
+.sleeps .dog-eye-2:after{
+    animation: sleepsShockedEyesBlack 2s 2s ease-in-out,
+    sleepsCloseEyesBlack 0.3s 4s forwards;
+    transform-origin: center;
+}
+@keyframes sleepsShockedEyesBlack {
+    50% {
+        transform: translate(-15%, 15%) scale(1.2);
+    }
+    100%{
+        transform: translate(-15%, 0%);
+    }
+}
+@keyframes sleepsCloseEyesBlack {
+    100%{
+        opacity: 0;
+    }
+}
+.sleeps .dog-eye-1,
+.sleeps .dog-eye-2{
+    animation: sleepsShockedEyesWhite 2s 2s ease-in-out,
+    sleepsCloseEyesWhite 0.3s 4s forwards;
+    transform-origin: center;
+}
+@keyframes sleepsShockedEyesWhite {
+    50% {
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+@keyframes sleepsCloseEyesWhite {
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scaleY(0.15);
+        background: #404040;
+    }
+}
+.sleeps .dog-tongue {
+    animation: sleepsTongue 1.5s 4s forwards linear;
+    transform-origin: center;
+}
+@keyframes sleepsTongue {
+    0%{
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-100%, -100%);
+    }
+}
+.sleeps .dog {
+    animation: sleepsBody 1.5s 6s forwards linear;
+}
+@keyframes sleepsBody {
+    100% {
+        transform: rotate(35deg) scale(1.26) translate(1%,5%);
+    }
+}
+
+.sleeps .dog-zzz{
+    animation: sleepsZzzStart 1s 9s ease-out,
+    sleepsZzzConst 2s 10s linear infinite alternate;
+    transform-origin: bottom right;
+}
+@keyframes sleepsZzzStart {
+    0% {
+        opacity: 0;
+        transform: scale(0.01);
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+@keyframes sleepsZzzConst {
+    0% {
+        transform: translate(-2%, -1%);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-2%, -1%);
+        opacity: 0;
+    }
+}
+.sleeps .dog-night{
+    animation: sleepsNightConst 0.2s 10s linear forwards;
+    transform-origin: bottom right;
+}
+@keyframes sleepsNightConst {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0.3;
+    }
+}
+

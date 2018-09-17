@@ -1,6 +1,6 @@
 .dog{ //dog body container
-    @include baseBottomLeft(-7%,38%,400px,300px);
-    transform: translate(-50%,0) scale(1.25);
+    @include baseBottomLeft(-12%,23%,400px,300px);
+    transform:  scale(1.25);
     //border: 1px solid #ff572d;
 }
 .dog::after{
@@ -194,8 +194,17 @@
     border-radius: 10% 200% 70% 150%;
     z-index: 2;
 }
-.dog-cloud{
-    @include baseTopLeft(-43px,-15px,165px,70px);
+.dog-cloud,
+.dog-cloud-txt,
+.dog-bed,
+.dog-zzz,
+.dog-night,
+.dog-floor{
+    opacity: 0;
+    transition: 1s;
+}
+.dog-cloud {
+    @include baseTopLeft(120px,320px,165px,70px);
     padding: 5px 10px 10px 10px;
     border: 2px solid #eee;
     border-radius: 14px;
@@ -218,4 +227,57 @@
     font-weight: 300;
     font-size: 12px;
     color: #f9f9f9;
+}
+.dog-bed{
+    @include baseBottomLeft(-15px,350px,360px,100px);
+   // border: 1px solid deeppink;
+}
+.dog-bed-1{
+    @include baseBottomLeft(0,0,280px,100px);
+    //border: 1px solid #49494c;
+    background: url(../images/bed-background.jpg);
+    border-radius: 90% 250% 50% 150%;
+}
+
+.dog-bed-2{
+    @include baseBottomRight(0,0,180px,100px);
+    //border: 1px solid #49494c;
+    background: url(../images/bed-background.jpg);
+    border-radius: 550% 250% 300% 90%;
+}
+.dog-bed-3{
+    @include baseBottomRight(10px,0,360px,100px);
+    //border: 1px solid #49494c;
+    background: url(../images/bed-background.jpg);
+    border-radius: 90%;
+    z-index: -100;
+}
+.dog-floor{
+    @include baseBottomLeft(-75px,250px,550px,120px);
+    background: $background;
+}
+.dog-zzz{
+    @include baseTopLeft(210px,450px,10px,10px);
+    font-size: 20px;
+    font-weight: bold;
+    opacity: 0;
+}
+.dog-zzz:before{
+    content: 'z';
+    display: block;
+    @include baseBottomRight(-20px,-25px,10px,10px);
+    font-size: 17px;
+    font-weight: bold;
+}
+.dog-zzz:after{
+    content: 'z';
+    display: block;
+    @include baseTopLeft(-45px,-35px,10px,10px);
+    font-size: 38px;
+    font-weight: bold;
+}
+.dog-night{
+    @include baseTopLeft(0px,0,100%,100%);
+    position: fixed;
+    background: black;
 }

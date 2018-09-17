@@ -1,3 +1,11 @@
+//elements
+.sits .dog-cloud,
+.sits .dog-cloud:after,
+.sits .dog-cloud-txt {
+    opacity: 1;
+}
+
+//animations
 .sits .dog-ear-1,
 .info-frame .dog-ear-1{
     animation: sitsEar 0.8s 0s infinite alternate ease-in-out;
@@ -73,7 +81,7 @@
         transform: translate(-50%, 0%);
     }
 }
-.dog-cloud{
+.sits .dog-cloud{
     animation: sitsCloudStart 2.5s 0s ease-out,
                 sitsCloudConst 2.5s 3s linear infinite alternate;
     transform-origin: bottom right;
