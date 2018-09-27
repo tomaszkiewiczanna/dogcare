@@ -10,4 +10,7 @@ In future Take care of the dog, will probably evolve into tamagochi kind of game
 ### what still needs some work?
  - Action buttons, other than sleeping one
 
+[See the project here!](https://tomaszkiewiczanna.github.io/take-care-of-the-dog/)
+
+
  [![N|Solid](https://image.ibb.co/kQORbp/doggo.png)]
